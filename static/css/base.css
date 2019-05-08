@@ -1,0 +1,41 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  background-image: url('../images/bg.jpeg');
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.pl-bg-test {
+  padding: 2.2rem 1rem 1rem 2.2rem !important;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+.focus_logo {
+  height: 1.8rem;
+  position: absolute;
+  bottom: 3rem;
+}
+
+.type-text-color {
+  color: #797575;
+}
+
+.d-flex-test{
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+}
