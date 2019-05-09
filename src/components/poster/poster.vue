@@ -12,7 +12,7 @@
         <div class="content_div mt-4 w-80">
           <div
             class="w-100 d-flex align-items-center justify-content-between border-bottom pb-2 pt-2"
-            @click="cn_choose($event.currentTarget)"
+            @touchstart="cn_choose($event.currentTarget)"
           >
             <div class="flex-1 cn_text">
               <span class="cn_text_span">{{ cn[cn_num] }}</span>
@@ -23,7 +23,7 @@
           </div>
           <div
             class="w-100 d-flex align-items-center justify-content-between border-bottom pb-2 pt-2"
-            @click="cn_choose($event.currentTarget)"
+            @touchstart="cn_choose($event.currentTarget)"
           >
             <div class="flex-1 cn_text">
               <span class="cn_text_span">{{ cn[cn_num + 1] }}</span>
@@ -34,7 +34,7 @@
           </div>
           <div
             class="w-100 d-flex align-items-center justify-content-between border-bottom pb-2 pt-2"
-            @click="cn_choose($event.currentTarget)"
+            @touchstart="cn_choose($event.currentTarget)"
           >
             <div class="flex-1 cn_text">
               <span class="cn_text_span">{{ cn[cn_num + 2] }}</span>
@@ -45,7 +45,7 @@
           </div>
           <div
             class="w-100 d-flex align-items-center justify-content-between border-bottom pb-2 pt-2"
-            @click="cn_choose($event.currentTarget)"
+            @touchstart="cn_choose($event.currentTarget)"
           >
             <div class="flex-1 cn_text">
               <span class="cn_text_span">{{ cn[cn_num + 3] }}</span>
@@ -56,7 +56,7 @@
           </div>
           <div
             class="w-100 d-flex align-items-center justify-content-between border-bottom pb-2 pt-2"
-            @click="cn_choose($event.currentTarget)"
+            @touchstart="cn_choose($event.currentTarget)"
           >
             <div class="flex-1 cn_text">
               <span class="cn_text_span">{{ cn[cn_num + 4] }}</span>
@@ -66,11 +66,11 @@
             </div>
           </div>
         </div>
-        <div class="text-center text-dark mt-3 refresh" @click="refresh">
+        <div class="text-center text-dark mt-3 refresh" @touchstart="refresh">
           <i class="fa fa-refresh"></i>
           <span>换一批</span>
         </div>
-        <button class="btn btn-primary w-80 mt-3" @click="to_url('poster_success?name=123')">生成承诺书</button>
+        <button class="btn btn-primary w-80 mt-3" @touchstart="to_url('poster_success?name=123')">生成承诺书</button>
       </div>
 
       <div
