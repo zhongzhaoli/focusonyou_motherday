@@ -24,7 +24,7 @@
 }
 .title_text img{
     width: 100%;
-    display: none;
+    /* display: none; */
 }
 .content{
     margin-top: 20px;
