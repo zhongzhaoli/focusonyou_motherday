@@ -1,6 +1,6 @@
 @font-face {
     font-family: "hyq";
-    src: url("../../assets/HYQiHei-90S.ttf");
+    src: url("../../../static/fonts/HYQiHei-90S.ttf");
 }
 .poster_div{
     width:360px;
