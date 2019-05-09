@@ -60,7 +60,7 @@
         </div>
       </div>
         <img id="success_img" class="mt-3" width="75%">
-      <div class="mt-4 text-drak"># 长按图片保存 #</div>  
+      <div class="text-drak"># 长按图片保存 #</div>  
     </div>
   </div>
 </template>
