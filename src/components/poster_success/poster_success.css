@@ -19,6 +19,9 @@
     letter-spacing: 1px;
     color: #37546d;
 }
+.title_text > div{
+    text-align: justify;
+}
 .title_text img{
     width: 100%;
     display: none;
