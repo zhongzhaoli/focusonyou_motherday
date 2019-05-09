@@ -13,7 +13,7 @@
 .title_text{
     width: 100%;
     margin-top: 20px;
-    font-family: "微软雅黑";
+    font-family: "Microsoft Yahei";
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 1px;
@@ -50,7 +50,7 @@
 }
 .content > div span{
     letter-spacing: 2px;
-    font-family: "微软雅黑";
+    font-family: "Microsoft Yahei";
     font-weight: bold;
 }
 .ps{
