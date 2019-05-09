@@ -4,7 +4,7 @@
           <img src="../../assets/images/loading.gif" alt="">
       </div>
     <div
-      class="w-100 h-100 pl-bg-test d-flex align-items-center flex-column position-relative justify-content-center"
+      class="w-100 h-100 d-flex align-items-center flex-column position-relative justify-content-center"
     >
       <div class="poster_div m-auto" id="capture">
         <div class="title">
@@ -59,7 +59,7 @@
           >
         </div>
       </div>
-        <img id="success_img" class="mt-3" width="300px">
+        <img id="success_img" class="mt-3" width="75%">
       <div class="mt-4 text-drak"># 长按图片保存 #</div>  
     </div>
   </div>
