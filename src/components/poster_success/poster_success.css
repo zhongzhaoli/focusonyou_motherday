@@ -13,8 +13,9 @@
 .title_text{
     width: 100%;
     margin-top: 20px;
-    font-family: "hyq";
-    font-size: 12px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 13px;
     letter-spacing: 1px;
     color: #37546d;
 }
@@ -24,7 +25,7 @@
 }
 .content{
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 13px;
 }
 .content > div{
     margin-top:10px;
@@ -49,10 +50,13 @@
 }
 .content > div span{
     letter-spacing: 2px;
-    font-family: "hyq";
+    font-family: "微软雅黑";
+    font-weight: bold;
 }
 .ps{
     margin-top: 20px;
+    font-size: 12px;
+    color: #37546d; 
 }
 .ps img{
     height: 11px;
