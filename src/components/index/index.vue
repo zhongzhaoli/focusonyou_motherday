@@ -10,9 +10,9 @@
       <div id="page1" class="d-flex-test w-100 flex-column">
         <span class="text-center mt-1 type-text-color small">类型选择</span>
         <div class="choose_div w-100 d-flex justify-content-center flex-column align-items-center">
-          <div id="1" @touchstart="choose_div($event.currentTarget)">早安问候</div>
-          <div id="2" @touchstart="choose_div($event.currentTarget)">晚安陪伴</div>
-          <div id="3" @touchstart="choose_div($event.currentTarget)">触及真心</div>
+          <div id="1" @click="choose_div($event.currentTarget)">早安问候</div>
+          <div id="2" @click="choose_div($event.currentTarget)">晚安陪伴</div>
+          <div id="3" @click="choose_div($event.currentTarget)">触及真心</div>
         </div>
       </div>
       <div id="page2" class="hide d-flex-test w-100 flex-column align-items-center">
@@ -41,14 +41,14 @@
             placeholder="你有什么想单独说的话吗？(选填)"
           >
         </div>
-        <button class="btn btn-primary w-75 mt-3 small_text_all" @touchstart="last_btn">下一步</button>
+        <button class="btn btn-primary w-75 mt-3 small_text_all" @click="last_btn">下一步</button>
       </div>
       <div id="page3" class="hide w-100">
         <div class="mt-4 text-center">
           <img src="../../assets/images/success.png" class="success_img" alt>
           <h4 class="mt-4 mb-0">恭喜你成功订制了特别短信</h4>
           <div class="mt-5">下面，生成你的母亲节“小小事承诺书”吧</div>
-          <button class="btn btn-primary mt-5 w-50" @touchstart="to_url('poster')">点击生成</button>
+          <button class="btn btn-primary mt-5 w-50" @click="to_url('poster')">点击生成</button>
         </div>
       </div>
       <img class="focus_logo" src="../../assets/images/focus.png" alt>
