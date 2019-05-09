@@ -51,7 +51,6 @@
           <button class="btn btn-primary mt-5 w-50" @touchstart="to_url('poster')">点击生成</button>
         </div>
       </div>
-      <span class="font-color-text">1</span>
       <img class="focus_logo" src="../../assets/images/focus.png" alt>
     </div>
   </div>
