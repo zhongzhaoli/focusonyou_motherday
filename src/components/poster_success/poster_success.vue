@@ -77,9 +77,9 @@ export default {
         this.name = this.$route.query.name;
         this.text = this.$route.query.text;
         html2canvas($("#capture")[0]).then(canvas => {
-            // $("#capture").hide();
+            $("#capture").hide(); 
             this.loading = false;
-            // $("#success_img")[0].src = canvas.toDataURL('image/png');
+            $("#success_img")[0].src = canvas.toDataURL('image/png');
         });
     }
 };
