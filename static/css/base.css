@@ -27,7 +27,7 @@ h3 {
 .focus_logo {
   height: 1.8rem;
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
 }
 
 .type-text-color {
@@ -38,4 +38,18 @@ h3 {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
+}
+
+.mt-focus{
+  margin-top: -2.8rem;
+}
+
+.loading_bg{
+  width: 2rem;
+  position: absolute;
+  top: 3rem;
+}
+
+.hide{
+  display: none;
 }
