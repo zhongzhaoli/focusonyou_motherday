@@ -22,7 +22,7 @@
         <div class="content">
           <div>
             <b><span>1.</span><div></div></b>
-            <span>在套餐期间，{{ text }}</span>
+            <span>在套餐期间，{{ text }}。</span>
           </div>
           <div>
             <b><span>2.</span><div></div></b>
