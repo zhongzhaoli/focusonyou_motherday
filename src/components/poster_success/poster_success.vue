@@ -86,9 +86,5 @@ export default {
 </script>
 <style>
 @import "./poster_success.css";
-body,html{
-  width: 100%;
-  height: auto !important;
-}
 </style>
 
