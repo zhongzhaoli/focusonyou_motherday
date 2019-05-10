@@ -78,7 +78,12 @@
         class="w-100 d-flex-test align-items-center flex-column position-relative justify-content-center"
       >
         <span class="text-center mt-1 type-text-color">填写承诺人</span>
-        <input type="text" class="form-control w-80 mt-4 small_text_all" v-model="name" placeholder="承诺人">
+        <input
+          type="text"
+          class="form-control w-80 mt-4 small_text_all"
+          v-model="name"
+          placeholder="承诺人"
+        >
         <button class="btn btn-primary w-80 mt-3 small_text_all" @click="first_click">下一步</button>
       </div>
       <img class="focus_logo" src="../../assets/images/focus.png" alt>
@@ -146,7 +151,15 @@ export default {
       ]
     };
   },
-  created() {},
+  created() {
+    $("input,select").blur(function() {
+      setTimeout(function() {
+        var scrollHeight =
+          document.documentElement.scrollTop || document.body.scrollTop || 0;
+        window.scrollTo(0, Math.max(scrollHeight - 1, 0));
+      }, 100);
+    });
+  },
   methods: {
     cn_choose(a) {
       $(".content_div > div")

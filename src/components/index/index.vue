@@ -22,21 +22,24 @@
             type="text"
             class="form-control small_text_all"
             v-model="request.nickname"
-            placeholder="怎么称呼你妈妈呢？如：某妈妈、饲养员等">
+            placeholder="怎么称呼你妈妈呢？如：某妈妈、饲养员等"
+          >
         </div>
         <div class="form-group mt-2 w-75">
           <input
             type="text"
             class="form-control small_text_all"
             v-model="request.phone"
-            placeholder="你妈妈常用手机号码">
+            placeholder="你妈妈常用手机号码"
+          >
         </div>
         <div class="form-group mt-2 w-75">
           <input
             type="text"
             class="form-control small_text_all"
             v-model="request.remark"
-            placeholder="你有什么单独想说的话吗？(选填)">
+            placeholder="你有什么单独想说的话吗？(选填)"
+          >
         </div>
         <button class="btn btn-primary w-75 mt-3 small_text_all" @click="last_btn">下一步</button>
       </div>
@@ -70,8 +73,16 @@ export default {
       }
     };
   },
-  created() {},
-  mounted(){
+  created() {
+    $("input,select").blur(function() {
+      setTimeout(function() {
+        var scrollHeight =
+          document.documentElement.scrollTop || document.body.scrollTop || 0;
+        window.scrollTo(0, Math.max(scrollHeight - 1, 0));
+      }, 100);
+    });
+  },
+  mounted() {
     this.loading = false;
   },
   methods: {
@@ -90,7 +101,7 @@ export default {
       this.page = 3;
       // 发送一个 POST 请求
       this.loading = true;
-      if(!this.can_post){
+      if (!this.can_post) {
         return;
       }
       this.can_post = false;
@@ -108,7 +119,7 @@ export default {
           this.loading = false;
           var al_ = true;
           for (var i in mes.data) {
-            if(al_){
+            if (al_) {
               alert(mes.data[i][0]);
               al_ = false;
             }
