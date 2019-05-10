@@ -3,6 +3,9 @@
     <div
       class="bg w-100 h-100 pl-bg-test d-flex align-items-center flex-column position-relative justify-content-center"
     >
+          <div class="text-center loading_bg" v-if="loading">
+        <img class="w-100" src="../../assets/images/loading.gif" alt>
+      </div>
       <h3 class="mt-focus" id="title">小小事承诺书</h3>
       <div
         id="page2"
@@ -115,6 +118,7 @@ export default {
       cn_num: 0,
       cn_text: "",
       name: "",
+      loading: true,
       cn: [
         "跟妈妈一起去做美甲",
         "跟妈妈撒一次娇",
@@ -170,6 +174,7 @@ export default {
     };
   },
   created() {
+    this.loading = false;
     document.addEventListener(
       "blur",
       e => {
@@ -216,13 +221,27 @@ export default {
       $("#page3").removeClass('hide');
     },
     to_url(a) {
-      this.$router.push({
-        path: a,
-        query: {
-          name: this.name,
-          text: this.cn_text
-        }
-      });
+    this.loading = true;
+      this.$post("/mother/poster", this.request).then(
+        mes => {
+    this.loading = false;
+          this.$router.push({
+            path: a,
+            query: {
+              name: this.name,
+              text: this.cn_text
+            }
+          });
+        }, mes => {
+    this.loading = false;
+          this.$router.push({
+            path: a,
+            query: {
+              name: this.name,
+              text: this.cn_text
+            }
+          });
+        });
     }
   }
 };
