@@ -25,7 +25,7 @@
           </div>
           <div>
             <b><span>2.</span><div></div></b>
-            <span>在套餐期间，默认妈妈煮的饭全是世界最好吃。</span>
+            <span>在套餐期间，默认妈妈煮的饭是全世界最好吃。</span>
           </div>
           <div>
             <b><span>3.</span><div></div></b>
