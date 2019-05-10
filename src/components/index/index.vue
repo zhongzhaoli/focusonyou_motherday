@@ -63,7 +63,8 @@ export default {
   data() {
     return {
       page: 1,
-      loading: false,
+      loading: true,
+      can_post: true,
       request: {
         type: "",
         nickname: "",
@@ -73,6 +74,9 @@ export default {
     };
   },
   created() {},
+  mounted(){
+    this.loading = false;
+  },
   methods: {
     choose_div(a) {
       $(".active").removeClass("active");
@@ -89,18 +93,28 @@ export default {
       this.page = 3;
       // 发送一个 POST 请求
       this.loading = true;
+      if(!can_post){
+        return;
+      }
+      this.can_post = false;
       this.$post("/mother/message", this.request).then(
         mes => {
           that.loading = false;
+          this.can_post = true;
           $(".pl-bg-test").removeClass("justify-content-center");
           $("#page2").hide();
           $("#title").hide();
           $("#page3").show("fast");
         },
         mes => {
+          this.can_post = true;
           this.loading = false;
+          var al_ = true;
           for (var i in mes.data) {
-            alert(mes.data[i][0]);
+            if(al){
+              alert(mes.data[i][0]);
+              al = false;
+            }
           }
         }
       );
