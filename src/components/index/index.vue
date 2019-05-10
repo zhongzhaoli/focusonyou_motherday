@@ -22,24 +22,21 @@
             type="text"
             class="form-control small_text_all"
             v-model="request.nickname"
-            placeholder="母亲的称呼"
-          >
+            placeholder="怎么称呼你妈妈呢？如：某妈妈、饲养员等">
         </div>
         <div class="form-group mt-2 w-75">
           <input
             type="text"
             class="form-control small_text_all"
             v-model="request.phone"
-            placeholder="母亲的电话"
-          >
+            placeholder="你妈妈常用手机号码">
         </div>
         <div class="form-group mt-2 w-75">
           <input
             type="text"
             class="form-control small_text_all"
             v-model="request.remark"
-            placeholder="你有什么想单独说的话吗？(选填)"
-          >
+            placeholder="你有什么单独想说的话吗？(选填)">
         </div>
         <button class="btn btn-primary w-75 mt-3 small_text_all" @click="last_btn">下一步</button>
       </div>
