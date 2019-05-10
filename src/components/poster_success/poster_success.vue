@@ -57,7 +57,7 @@
           >
         </div>
       </div>
-        <img id="success_img" class="mt-3" width="75%">
+        <img id="success_img" class="mt-3" width="100%">
       <div class="text-drak"># 长按图片保存 #</div>  
     </div>
   </div>
