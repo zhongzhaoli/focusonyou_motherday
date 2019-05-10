@@ -59,7 +59,7 @@
       </div>
         <div class="text-777 mb-3">长按图片保存</div>  
         <img id="success_img" width="100%">
-        <div class="text-777 mt-3"><b>我们还有一个送花计划，记得返回推文去参加哦</b></div>
+        <div class="text-777 mt-3 text-center"><b>我们还有一个送花计划，记得返回推文去参加哦</b></div>
     </div>
   </div>
 </template>
