@@ -57,8 +57,8 @@
           >
         </div>
       </div>
+        <div class="text-777">长按图片保存</div>  
         <img id="success_img" width="100%">
-      <div class="text-drak"># 长按图片保存 #</div>  
     </div>
   </div>
 </template>
