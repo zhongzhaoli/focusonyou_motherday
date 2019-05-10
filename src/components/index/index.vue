@@ -42,6 +42,9 @@
           >
         </div>
         <button class="btn btn-primary w-75 mt-3 small_text_all" @click="last_btn">下一步</button>
+        <div class="mt-2 small_s text-777" @click="back_btn">
+          返回上一步
+          </div>
       </div>
       <div id="page3" class="hide w-100">
         <div class="mt-4 text-center">
@@ -74,10 +77,15 @@ export default {
     };
   },
   created() {
-    document.addEventListener('blur', (e) => {
+    document.addEventListener(
+      "blur",
+      e => {
         // 这里加了个类型判断，因为a等元素也会触发blur事件
-        ['input', 'textarea'].includes(e.target.localName) && document.body.scrollIntoView(false)
-    }, true)
+        ["input", "textarea"].includes(e.target.localName) &&
+          document.body.scrollIntoView(false);
+      },
+      true
+    );
   },
   mounted() {
     this.loading = false;
@@ -127,7 +135,7 @@ export default {
     back_btn() {
       this.page = 1;
       $("#page2").addClass("hide");
-      $("#page1").show("fast");
+      $("#page1").show();
     },
     to_url(a) {
       this.$router.push({ name: a });

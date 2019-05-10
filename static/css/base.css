@@ -5,10 +5,7 @@ html {
   background: white;
 }
 
-@font-face {
-  font-family: "hyq";
-  src: url("../fonts/HYQiHei-90S.ttf");
-}
+
 
 #app {
   width: 100%;
@@ -58,4 +55,8 @@ h3 {
 
 .hide{
   display: none;
+}
+
+.text-777{
+  color: #777;
 }
