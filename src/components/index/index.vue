@@ -93,7 +93,7 @@ export default {
       this.page = 3;
       // 发送一个 POST 请求
       this.loading = true;
-      if(!can_post){
+      if(!this.can_post){
         return;
       }
       this.can_post = false;
