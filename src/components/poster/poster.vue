@@ -66,18 +66,23 @@
             </div>
           </div>
         </div>
-        <div class="text-center text-dark mt-3 refresh" @click="refresh">
-          <i class="fa fa-refresh"></i>
-          <span>换一批</span>
+        <div class="w-80 mt-3 d-flex justify-content-between align-items-center">
+          <div class="refresh text-dark">
+            <span @click="zdy_refush">没有想要的？</span>
+          </div>
+          <div class="text-center text-dark refresh" @click="refresh">
+            <i class="fa fa-refresh"></i>
+            <span>换一批</span>
+          </div>
         </div>
-        <button class="btn btn-primary w-80 mt-3" @click="to_url('poster_success?name=123')">生成承诺书</button>
+        <button class="btn btn-primary w-80 mt-3" @click="to_url('poster_success')">生成承诺书</button>
       </div>
 
       <div
         id="page1"
         class="w-100 d-flex-test align-items-center flex-column position-relative justify-content-center"
       >
-        <span class="text-center mt-1 type-text-color">填写承诺人</span>
+        <span class="text-center mt-1 type-text-color small">填写承诺人</span>
         <input
           type="text"
           class="form-control w-80 mt-4 small_text_all"
@@ -85,6 +90,19 @@
           placeholder="承诺人"
         >
         <button class="btn btn-primary w-80 mt-3 small_text_all" @click="first_click">下一步</button>
+      </div>
+      <div
+        id="page3"
+        class="w-100 hide d-flex-test align-items-center flex-column position-relative justify-content-center"
+      >
+        <span class="text-center mt-1 type-text-color small">自定义承诺</span>
+        <input
+          type="text"
+          class="form-control w-80 mt-4 small_text_all"
+          placeholder="想承诺的事"
+          v-model="cn_text"
+        >
+        <button class="btn btn-primary w-80 mt-3" @click="to_url('poster_success')">生成承诺书</button>
       </div>
       <img class="focus_logo" src="../../assets/images/focus.png" alt>
     </div>
@@ -152,10 +170,15 @@ export default {
     };
   },
   created() {
-    document.addEventListener('blur', (e) => {
+    document.addEventListener(
+      "blur",
+      e => {
         // 这里加了个类型判断，因为a等元素也会触发blur事件
-        ['input', 'textarea'].includes(e.target.localName) && document.body.scrollIntoView(false)
-    }, true)
+        ["input", "textarea"].includes(e.target.localName) &&
+          document.body.scrollIntoView(false);
+      },
+      true
+    );
   },
   methods: {
     cn_choose(a) {
@@ -187,6 +210,10 @@ export default {
       } else {
         this.cn_num = this.cn_num + 5;
       }
+    },
+    zdy_refush(){
+      $("#page2").hide();
+      $("#page3").removeClass('hide');
     },
     to_url(a) {
       this.$router.push({
