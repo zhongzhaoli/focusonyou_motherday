@@ -152,13 +152,10 @@ export default {
     };
   },
   created() {
-    $("input,select").blur(function() {
-      setTimeout(function() {
-        var scrollHeight =
-          document.documentElement.scrollTop || document.body.scrollTop || 0;
-        window.scrollTo(0, Math.max(scrollHeight - 1, 0));
-      }, 100);
-    });
+    document.addEventListener('blur', (e) => {
+        // 这里加了个类型判断，因为a等元素也会触发blur事件
+        ['input', 'textarea'].includes(e.target.localName) && document.body.scrollIntoView(false)
+    }, true)
   },
   methods: {
     cn_choose(a) {
