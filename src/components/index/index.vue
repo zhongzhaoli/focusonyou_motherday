@@ -111,9 +111,9 @@ export default {
           this.loading = false;
           var al_ = true;
           for (var i in mes.data) {
-            if(al){
+            if(al_){
               alert(mes.data[i][0]);
-              al = false;
+              al_ = false;
             }
           }
         }
